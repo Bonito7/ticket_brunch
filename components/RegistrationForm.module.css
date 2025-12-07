@@ -1,0 +1,57 @@
+.section {
+  padding: 4rem 2rem;
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-blue);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.input, .select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.input:focus, .select:focus {
+  outline: 2px solid var(--accent-orange);
+  border-color: transparent;
+}
+
+.submitButton {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #06152a;
+}

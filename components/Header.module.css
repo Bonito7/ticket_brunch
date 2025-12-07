@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem; /* Reduced padding */
+  background-color: var(--primary-blue);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 70px; /* Increased from 50px */
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--accent-orange);
+}
+
+.navLink:hover {
+  color: var(--accent-orange);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.adminButton {
+  background-color: white;
+  color: var(--accent-orange);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.2s;
+  /* Removed margin-right, using gap instead */
+}
+
+.adminButton:hover {
+  transform: translateY(-2px);
+  background-color: #f0f0f0;
+}
+
+.ctaButton {
+  background-color: var(--accent-orange);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background-color: #e06a15;
+}
