@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Header.module.css';
+import HamburgerMenu from './HamburgerMenu';
 
 export default function Header() {
   return (
@@ -8,6 +9,7 @@ export default function Header() {
         <img src="/logo.png" alt="Brunch'Com Logo" style={{height: '100%', objectFit: 'contain'}} />
       </div>
       
+      {/* Desktop Navigation */}
       <div className={styles.actions}>
         <Link href="/admin" className={styles.adminButton}>
           Administrer
@@ -16,6 +18,9 @@ export default function Header() {
           Réserver
         </Link>
       </div>
+
+      {/* Mobile Navigation */}
+      <HamburgerMenu />
     </header>
   );
 }

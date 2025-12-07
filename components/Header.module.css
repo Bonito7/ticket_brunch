@@ -70,3 +70,18 @@
   transform: translateY(-2px);
   background-color: #e06a15;
 }
+
+/* Responsive - Hide desktop navigation on mobile */
+@media (max-width: 768px) {
+  .actions {
+    display: none;
+  }
+  
+  .header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+}

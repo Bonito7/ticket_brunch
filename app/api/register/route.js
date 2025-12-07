@@ -25,6 +25,28 @@ export async function POST(request) {
     return Response.json({ success: true, data: participant });
   } catch (error) {
     console.error("MongoDB Save Error:", error);
-    return Response.json({ success: false, error: error.message }, { status: 500 });
+    
+    // Handle Mongoose validation errors
+    if (error.name === 'ValidationError') {
+      const validationErrors = Object.values(error.errors).map(err => err.message);
+      return Response.json({ 
+        success: false, 
+        error: `Erreur de validation: ${validationErrors.join(', ')}` 
+      }, { status: 400 });
+    }
+    
+    // Handle duplicate key errors
+    if (error.code === 11000) {
+      return Response.json({ 
+        success: false, 
+        error: 'Un participant avec cet ID existe déjà' 
+      }, { status: 409 });
+    }
+    
+    // Generic error
+    return Response.json({ 
+      success: false, 
+      error: error.message || 'Erreur lors de l\'enregistrement' 
+    }, { status: 500 });
   }
 }
