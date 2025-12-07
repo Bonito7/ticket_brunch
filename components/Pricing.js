@@ -4,7 +4,7 @@ import styles from './Pricing.module.css';
 export default function Pricing({ onSelect }) {
   const passes = [
     { type: 'Pass Adhérent', price: '10.000', currency: 'FCFA', features: ['Accès complet', 'Buffet à volonté', 'Activités incluses'], popular: true },
-    { type: 'Pass Non-adhérent', price: '15.000', currency: 'FCFA', features: ['Accès complet', 'Buffet à volonté', 'Activités incluses'], popular: false },
+    { type: 'Pass Non-Adhérent', price: '15.000', currency: 'FCFA', features: ['Accès complet', 'Buffet à volonté', 'Activités incluses'], popular: false },
     { type: 'Pass Enfant', price: '5.000', currency: 'FCFA', features: ['Accès (dès 6 ans)', 'Menu enfant', 'Jeux adaptés'], popular: false },
   ];
 

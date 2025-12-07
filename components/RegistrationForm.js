@@ -73,7 +73,7 @@ export default function RegistrationForm({ selectedPass, onSubmit }) {
             onChange={handleChange}
           >
             <option value="Pass Adhérent">Pass Adhérent (10.000 FCFA)</option>
-            <option value="Pass Non-adhérent">Pass Non-adhérent (15.000 FCFA)</option>
+            <option value="Pass Non-Adhérent">Pass Non-Adhérent (15.000 FCFA)</option>
             <option value="Pass Enfant">Pass Enfant (5.000 FCFA)</option>
           </select>
         </div>

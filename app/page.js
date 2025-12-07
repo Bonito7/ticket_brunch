@@ -32,17 +32,31 @@ export default function Home() {
 
     // Save to API
     try {
-      await fetch('/api/register', {
+      const response = await fetch('/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(fullData)
       });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.error('API Error:', result);
+        alert(`Erreur lors de l'enregistrement: ${result.error || 'Erreur inconnue'}`);
+        return; // Don't show ticket if save failed
+      }
+
+      if (!result.success) {
+        console.error('Save failed:', result);
+        alert(`Erreur: ${result.error || 'Échec de l\'enregistrement'}`);
+        return;
+      }
+
       alert('Inscription validée et enregistrée !');
       setTicketData(fullData);
     } catch (err) {
-      console.error(err);
-      alert("Erreur lors de l'enregistrement, mais le ticket va s'afficher.");
-      setTicketData(fullData); // Fallback to show ticket even if save fails
+      console.error('Network error:', err);
+      alert("Erreur de connexion au serveur. Veuillez réessayer.");
     }
   };
 
