@@ -25,7 +25,7 @@ export default function Home() {
     const fullData = {
       ...data,
       id: ticketId,
-      date: '13 Décembre 2024',
+      date: '13 Décembre 2025',
       time: '10h00',
       location: 'Jardin Botanique de Bingerville'
     };
